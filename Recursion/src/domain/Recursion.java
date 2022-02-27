@@ -55,4 +55,18 @@ public class Recursion {
         return prom / arr.length;
     }
 
+    public int factorial(int n) {
+        int f = 1;
+        for (int i = 2; i <= n; i++) {
+            f *= i;
+        }
+        return f;
+    }
+
+    public int factorialRecur(int n, int f, int i) {
+        if (i <= n) {
+            f = i * factorialRecur(n, f, i + 1);
+        }
+        return f;
+    }
 }
