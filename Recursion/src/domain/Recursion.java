@@ -11,6 +11,8 @@ package domain;
  */
 public class Recursion {
 
+    private static float prom = 0;
+
     public void recursion1(int[] arreglo, int i) {
         if (i >= 0) {
             recursion2(arreglo, arreglo.length - 1);
@@ -36,4 +38,21 @@ public class Recursion {
             System.out.println(arreglo[i]);
         }
     }
+
+    public float promedio(float[] arr) {
+        float prom = 0;
+        for (int i = 0; i < arr.length; i++) {
+            prom += arr[i];
+        }
+        return prom / arr.length;
+    }
+
+    public float recurPromedio(float arr[], int i) {
+        if (i < arr.length) {
+            prom += arr[i];
+            recurPromedio(arr, i + 1);
+        }
+        return prom / arr.length;
+    }
+
 }

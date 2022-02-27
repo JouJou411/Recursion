@@ -15,8 +15,10 @@ public class TestRecursion {
 
     public static void main(String[] args) {
         Recursion r = new Recursion();
-        int arr[] = {5, 8, 4, 9, 2, 5};
-        r.recursion1(arr, arr.length - 1);
-        r.mostrar(arr, arr.length - 1);
+        float arr[] = {5, 8, 4, 9, 2, 5};
+//        r.recursion1(arr, arr.length - 1);
+//        r.mostrar(arr, arr.length - 1);
+        System.out.println("Promedio: " + r.promedio(arr));
+        System.out.println("Recursivo promedio: " + r.recurPromedio(arr, 0));
     }
 }
